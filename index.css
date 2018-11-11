@@ -1,0 +1,58 @@
+.main_content{
+    background-image: url("images/lightbulb.jpg");
+    background-size: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;   
+}
+
+
+.main_content img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.brief_summary{
+    margin-top: 50px;
+}
+
+.btn-light{
+    margin-top: 10px;
+    border-width: 1px;
+    border-color: black;
+}
+
+
+#ongoing_projects{
+    margin-top: 100px;
+    background-color: #606368;
+    color: white;
+}
+
+#ongoing_header{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#projects_list{
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+#projects_list .list_item{
+    margin-bottom: 40px;
+}
+
+.footer{
+    background-color: #d7dbe2;
+    text-align: center;
+}
+
+.clear {
+    clear: both;
+}
