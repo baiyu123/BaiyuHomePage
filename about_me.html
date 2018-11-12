@@ -3,10 +3,10 @@
     <head>
         <title>Baiyu's CV</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href="index.css" rel="stylesheet" type="text/css"\>
+        <link href="about_me.css" rel="stylesheet" type="text/css"\>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="index.html">Baiyu Huang</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,16 +16,148 @@
               <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               <a class="nav-item nav-link active" href="#">About Me</a>
               <a class="nav-item nav-link" href="#">Projects</a>
-              <a class="nav-item nav-link" href="#">Work Experience</a>
               <a class="nav-item nav-link" href="#">Start Up</a>
             </div>
           </div>
         </nav>
-        <div class="main_content">
-            <div class="container-fluid">
+            <div class="container-fluid main_content">
                 <!-- picture and summary -->
-                <div class="row">
-                    
+                <div class="row" id="summary">
+                    <div class="col-lg-3 offset-lg-2 margin_100">
+                      <p>
+                        I have solid coding experience. One year experience as software engineer and half year experience as c++ programming class TA. Both experience help me build up my technical communication and coding skill. I am capable of adapting to new work environment and tech stack.
+                      </p>
+                      <a href="pdfs/BaiyuResumeNew.pdf">
+                            <button type="button" class="btn btn-light" >My Resume</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- Educations -->
+                <div class="row" id="educations">
+                  <div class="col">
+                    <!-- header -->
+                    <div class="row header">
+                      <div class="col">
+                        <h1>
+                          EDUCATIONS
+                        </h1>
+                      </div>
+                    </div>
+                    <!-- Schools -->
+                    <div class="row" id="schools">
+                      <div class="col-lg-4 offset-lg-2">
+                        <p>
+                          University of Southern California
+                          <br/>
+                          2018-2020
+                          <br/>
+                          Master of Science in Compuer Science(Data Science)
+                        </p>
+                      </div>
+                      <div class="col-lg-4 offset-lg-1">
+                        <p>
+                          University of Southern California
+                          <br/>
+                          2013-2017
+                          <br/>
+                          Bachelor of Science in Compuer Science
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Works Experience -->
+                <div class="row" id="work">
+                  <div class="col">
+                    <div class="row header">
+                      <div class="col">
+                        <h1>
+                          Work Experience
+                        </h1>
+                      </div>
+                    </div>
+                    <!-- work items -->
+                    <div class="row">
+                      <div class="col-lg-8 offset-lg-2 rounded work_item">
+                        <h2> 
+                          Haas Automation
+                        </h2>
+                        <p>
+                          Oxnard, CA<br/>
+                          Software Engineer<br/>
+                          Nov 2017-July 2018
+                        </p>
+                        <p>
+                          ● Optimized CNC machine code interpreter using Java and increased interpreter jump feature efficiency 200 times<br/>
+                          ● Innovated a new way using matlab, C++, ML and OpenCV to implement broken tool detection using camera and
+                          achieve the accuracy of 98%<br/>
+                          ● Added new features to Java swing front end user interface
+                        </p>
+                        <p>
+                          <b><i>Technologies​</i></b>: Machine Learning, Matlab, C++, OpenCV, Java, Swing
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-8 offset-lg-2 rounded work_item">
+                        <h2> 
+                          Taskit
+                        </h2>
+                        <p>
+                          San Mateo, CA<br/>
+                          Backend Software Engineer<br/>
+                          April 2018-May 2018
+                        </p>
+                        <p>
+                          ● Designed and implemented node database and API for Taskit web application and iOS app.
+                        </p>
+                        <p>
+                          <b><i>Technologies​</i></b>: Python, Django, Neo4j
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-8 offset-lg-2 rounded work_item">
+                        <h2> 
+                          Kidtronics
+                        </h2>
+                        <p>
+                          Los Angeles, CA<br/>
+                          Co-founder and Software Engineer<br/>
+                          May 2018-Present
+                        </p>
+                        <p>
+                          ● Implemented frontend and backend of Electron application with HTML/CSS and Javascript<br/>
+                          ● Designed and implemented microcontroller communication protocol and hardware PCB design
+                        </p>
+                        <p>
+                          <b><i>Technologies​</i></b>:  Javascript, HTML, CSS, ReactJS, Electron, C++, Arduino, Eagle PCB
+                        </p>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-lg-8 offset-lg-2 rounded work_item">
+                        <h2> 
+                          USC Viterbi School of Engineering
+                        </h2>
+                        <p>
+                          Los Angeles, CA<br/>
+                          Teaching Assistant for ITP-165 Introduction to C++ Programming<br/>
+                          Aug 2018-Present
+                        </p>
+                        <p>
+                          ● Tutored student in individual and group basis to reinforce programming concept and received excellent feedback<br/>
+                          ● Ran weekly office hour and lab to assist student in assignments
+                        </p>
+                      </div>
+                    </div>
+
+
+                  </div>
                 </div>
             </div>
 

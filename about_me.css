@@ -1,0 +1,47 @@
+.main_content{
+    background-image: url("images/pen.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 50px;  
+}
+
+.margin_100{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+#educations{
+    margin-top: 100px;
+    background-color: #606368;
+    color: white;
+}
+
+.header{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#schools{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#work{
+    background-image: url("images/laptop.jpg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.work_item{
+    background-color: white;
+    border-color: #606368;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
