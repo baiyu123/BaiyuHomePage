@@ -57,3 +57,10 @@
 .clear {
     clear: both;
 }
+
+@media screen and (max-device-width: 768px){
+    .main_content{
+        background-attachment: scroll;
+        background-position: 50% 40%;
+    }
+}

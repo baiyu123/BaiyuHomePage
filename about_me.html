@@ -4,6 +4,9 @@
         <title>Baiyu's CV</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link href="about_me.css" rel="stylesheet" type="text/css"\>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+
     </head>
     <body>
         <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
@@ -14,9 +17,16 @@
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
               <a class="nav-item nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active" href="#">About Me</a>
-              <a class="nav-item nav-link" href="#">Projects</a>
-              <a class="nav-item nav-link" href="#">Start Up</a>
+              <a class="nav-item nav-link" href="about_me.html">About Me</a>
+              <div class="dropdown">
+                <a class="nav-item nav-link dropdown-toggle active" data-toggle="dropdown" href="#">Projects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="projects_games.html">Games</a>
+                  <a class="dropdown-item" href="projects_CV.html">Computer Vision & Robotics</a>
+                  <a class="dropdown-item" href="#">Web Developement</a>
+                </div>
+              </div>
+              <a class="nav-item nav-link" href="startup.html">Startup</a>
             </div>
           </div>
         </nav>
@@ -72,7 +82,7 @@
                     <div class="row header">
                       <div class="col">
                         <h1>
-                          Work Experience
+                          Work Experiences
                         </h1>
                       </div>
                     </div>
