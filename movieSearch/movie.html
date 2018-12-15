@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Searching</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link href="movie.css" rel="stylesheet" type="text/css"\>
+</head>
+<body>
+
+    <div class="container-fluid">
+
+        <div class="row" id="title">
+            <h1 class="col-12 mt-4">Movie Database</h1>
+        </div> <!-- .row -->
+
+        <div class="row">
+
+            <form action="" method="" class="col-lg-10 col-md-10 offset-lg-3 offset-md-2" id="search-form">
+                <div class="form-row">
+
+                    <div class="col-12 mt-4 col-sm-6 col-lg-4">
+                        <label for="search-id" class="sr-only">Search:</label>
+                        <input type="text" name="" class="form-control" id="search-id" placeholder="Search...">
+                    </div>
+
+                    <div class="col-12 mt-4 col-sm-4 col-md-3 col-lg-2">
+                        <label for="limit-id" class="sr-only">Number of results:</label>
+                        <select name="" class="form-control" id="limit-id">
+                            <option value="5">5 results</option>
+                            <option value="10">10 results</option>
+                            <option value="20">20 results</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 mt-4 col-sm-auto">
+                        <button type="submit" class="btn btn-primary btn-block">Search</button>
+                    </div>
+
+                </div> <!-- .form-row -->
+            </form>
+
+
+        </div> <!-- .row -->
+
+        <div class="row mt-5">
+            <div class="col" id="movie_results">
+                <!-- <div class="row">
+                    <div class="col-lg-2 offset-lg-1 movie">
+                        <div class="thumbnail">
+                            <img src="https://image.tmdb.org/t/p/w500/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg">
+                             <div class="mask">
+                                <h3> hello </h3>
+                             </div>
+                        </div>
+                        <div class="text-center">
+                            title<br>
+                            date
+                        </div>
+                    </div>
+                    <div class="col-lg-2 movie2">
+                        world
+                    </div>
+                    <div class="col-lg-2 movie">
+                    </div>
+                    <div class="col-lg-2 movie2">
+                    </div>
+                    <div class="col-lg-2 movie">
+                    </div>
+                </div> --> <!-- row of movies -->
+            </div>
+        </div> <!-- .row result section -->
+
+
+    </div> <!-- .container-fluid -->
+    <script>
+    var request = new XMLHttpRequest();
+
+    // <div class="col-lg-2 offset-lg-1 movie">
+    //     <div class="thumbnail">
+    //         <img src="https://image.tmdb.org/t/p/w500/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg">
+    //          <div class="mask">
+    //             <p> overview text </p>
+    //          </div>
+    //     </div>
+    //     <div class="text-center">
+    //         title<br>
+    //         date
+    //     </div>
+    // </div>
+
+    request.onload = function(){
+        var data = JSON.parse(this.response);
+        var results = data.results;
+
+        // clean up all the movies
+        movieSection = document.querySelector('#movie_results');
+        movieSection.innerHTML = '';
+
+        // get selected option
+        var option = document.querySelector('#limit-id');
+        var resultNumLimit = option.value;
+
+        // loop though all results
+        var resultLength = Math.min(resultNumLimit, results.length);
+        console.log("lenght"+resultLength);
+        for(var i = 0; i < resultLength; i+=5){
+            console.log(results[i].title);
+
+            var movieRow = document.createElement('div');
+            movieRow.classList.add('row');
+            for(var j = i; j < i+5; j++){
+                if(j >= results.length){
+                    break;
+                }
+                var posterURL = "https://image.tmdb.org/t/p/w500/" + results[j].poster_path;
+                if(results[j].poster_path == null){
+                    posterURL = 'images/image_not_found.png';
+                }
+                var movie = document.createElement('div');
+                movie.classList.add('col-lg-2');
+                movie.classList.add('col-md-2');
+                movie.classList.add('col-sm-2');
+                movie.classList.add('movie');
+                // at the beginning of each row
+                if(j - i == 0){
+                    movie.classList.add('offset-lg-1');
+                    movie.classList.add('offset-md-1');
+                    movie.classList.add('offset-sm-1');
+                }
+                var thumbnail = document.createElement('div');
+                thumbnail.classList.add('thumbnail');
+                var poster= document.createElement('img');
+                poster.src = posterURL;
+                poster.alt = "Image not found";
+                var mask = document.createElement('div');
+                mask.classList.add('mask');
+                var detail = document.createElement('p');
+                detail.innerHTML = results[j].overview;
+                var titleDate = document.createElement('div');
+                titleDate.classList.add('text-center');
+                titleDate.innerHTML = results[i].title + '</br>' + results[j].release_date;
+
+
+                mask.appendChild(detail);
+                thumbnail.appendChild(poster);
+                thumbnail.appendChild(mask);
+                movie.appendChild(thumbnail);
+                movie.appendChild(titleDate);
+                movieRow.appendChild(movie);
+            }
+            movieSection.appendChild(movieRow);
+        }
+
+    }
+
+    
+
+    document.querySelector("#search-form").onsubmit = function(){
+        var searchTerm = document.querySelector("#search-id").value.trim();
+        console.log(searchTerm);
+        var url = 'https://api.themoviedb.org/3/search/movie?api_key=095fa76e936c59f1d5f8c054aa0df936&language=en-US&query=' + searchTerm + '&page=1';
+        request.open('GET', url);
+        request.send();
+        return false;
+    }
+    </script>
+
+</body>
+</html>
