@@ -1,0 +1,95 @@
+#weather {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    background-color: #B7263C;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+
+#list_section{
+    border-width: 2px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    box-shadow: 2px 2px 2px rgba(200,200,200,0.8);
+}
+
+#list_section h1{
+    color: white;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    height: 60px;
+}
+
+body{
+    background-color: #FEFDDE;
+    margin-top: 0px;
+}
+
+#header{
+    background-color: #E59856;
+    margin-top: 0px;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+ul {
+    margin-top: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+#list_section li{
+    /*box-shadow: 2px 2px 2px rgba(200,200,200,0.8);*/
+    /*height: 30px;*/
+    width: 100%;
+    border-bottom: 1px solid grey;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Staatliches', cursive;
+}
+
+#list_section ul i{
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#list_section p{
+    display: inline;
+}
+
+#add_input{
+    width: 98.4%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 30px;
+}
+
+.line_cross{
+    text-decoration: line-through;
+}
+
+#header h1{
+    display: inline-block;
+}
+
+#plus{
+    margin-left: 80px;
+
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+}
+
+
+
+
